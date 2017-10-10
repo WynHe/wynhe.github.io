@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-10-10T14:53:46.000Z</updated>
+  <updated>2017-07-28T18:15:58.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,43 +14,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>Linux/Mac 导入／导出 MySQL 数据库命令</title>
-    <link href="http://yoursite.com/2017/10/10/database_mysql_import_export_database_in_linux/"/>
-    <id>http://yoursite.com/2017/10/10/database_mysql_import_export_database_in_linux/</id>
-    <published>2017-10-10T14:50:39.000Z</published>
-    <updated>2017-10-10T14:53:46.000Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="一、导出数据库用mysqldump命令（注意mysql的安装路径，即此命令的路径）："><a href="#一、导出数据库用mysqldump命令（注意mysql的安装路径，即此命令的路径）：" class="headerlink" title="一、导出数据库用mysqldump命令（注意mysql的安装路径，即此命令的路径）："></a>一、导出数据库用mysqldump命令（注意mysql的安装路径，即此命令的路径）：</h3><h4 id="1、导出数据和表结构："><a href="#1、导出数据和表结构：" class="headerlink" title="1、导出数据和表结构："></a>1、导出数据和表结构：</h4><p><code>mysqldump -u用户名 -p密码 数据库名 &gt; 数据库名.sql</code><br><code>#/usr/local/mysql/bin/   mysqldump -uroot -p abc &gt; abc.sql</code>  敲回车后会提示输入密码</p>
-<h4 id="2、只导出表结构"><a href="#2、只导出表结构" class="headerlink" title="2、只导出表结构"></a>2、只导出表结构</h4><p><code>mysqldump -u用户名 -p密码 -d 数据库名 &gt; 数据库名.sql</code><br><code>#/usr/local/mysql/bin/   mysqldump -uroot -p -d abc &gt; abc.sql</code></p>
-<p><strong>注：/usr/local/mysql/bin/  —&gt;  mysql的data目录</strong>  </p>
-<h3 id="二、导入数据库"><a href="#二、导入数据库" class="headerlink" title="二、导入数据库"></a>二、导入数据库</h3><h4 id="1、首先建空数据库"><a href="#1、首先建空数据库" class="headerlink" title="1、首先建空数据库"></a>1、首先建空数据库</h4><p><code>mysql&gt;create database abc;</code></p>
-<h4 id="2、导入数据库"><a href="#2、导入数据库" class="headerlink" title="2、导入数据库"></a>2、导入数据库</h4><h5 id="方法一："><a href="#方法一：" class="headerlink" title="方法一："></a>方法一：</h5><p>（1）选择数据库  <code>mysql&gt;use abc;</code><br>（2）设置数据库编码  <code>mysql&gt;set names utf8;</code><br>（3）导入数据（注意sql文件的路径）<code>mysql&gt;source /home/abc/abc.sql;</code>  </p>
-<h5 id="方法二："><a href="#方法二：" class="headerlink" title="方法二："></a>方法二：</h5><p><code>mysql -u用户名 -p密码 数据库名 &lt; 数据库名.sql</code><br><code>#mysql -uabc_f -p abc &lt; abc.sql</code></p>
-<p><em>建议使用第二种方法导入。</em></p>
-<p><strong>注意：有命令行模式，有sql命令</strong></p>
-<blockquote>
-<p>引自：<a href="http://www.cnblogs.com/jiunadianshi/articles/2022334.html" target="_blank" rel="external">http://www.cnblogs.com/jiunadianshi/articles/2022334.html</a></p>
-</blockquote>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;一、导出数据库用mysqldump命令（注意mysql的安装路径，即此命令的路径）：&quot;&gt;&lt;a href=&quot;#一、导出数据库用mysqldump命令（注意mysql的安装路径，即此命令的路径）：&quot; class=&quot;headerlink&quot; title=&quot;一、导出数据库用
-    
-    </summary>
-    
-      <category term="Database" scheme="http://yoursite.com/categories/Database/"/>
-    
-      <category term="MySQL" scheme="http://yoursite.com/categories/Database/MySQL/"/>
-    
-    
-      <category term="MySQL" scheme="http://yoursite.com/tags/MySQL/"/>
-    
-      <category term="导数据" scheme="http://yoursite.com/tags/%E5%AF%BC%E6%95%B0%E6%8D%AE/"/>
-    
-  </entry>
   
   <entry>
     <title>迁移博客（Hexo）至新电脑</title>
@@ -91,6 +54,33 @@
       <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
     
       <category term="GitHubPage" scheme="http://yoursite.com/tags/GitHubPage/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://yoursite.com/2017/07/29/hello-world/"/>
+    <id>http://yoursite.com/2017/07/29/hello-world/</id>
+    <published>2017-07-28T16:37:02.000Z</published>
+    <updated>2017-03-17T05:02:34.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+    
+    </summary>
+    
     
   </entry>
   
@@ -156,33 +146,6 @@
       <category term="测试标签" scheme="http://yoursite.com/tags/%E6%B5%8B%E8%AF%95%E6%A0%87%E7%AD%BE/"/>
     
       <category term="测试标签2" scheme="http://yoursite.com/tags/%E6%B5%8B%E8%AF%95%E6%A0%87%E7%AD%BE2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://yoursite.com/2017/07/29/hello-world/"/>
-    <id>http://yoursite.com/2017/07/29/hello-world/</id>
-    <published>2017-07-28T16:37:02.000Z</published>
-    <updated>2017-03-17T05:02:34.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
-    
-    </summary>
-    
     
   </entry>
   
