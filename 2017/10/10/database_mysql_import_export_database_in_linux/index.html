@@ -89,18 +89,18 @@
 
 
 
-<meta name="description" content="###一、导出数据库用mysqldump命令（注意mysql的安装路径，即此命令的路径）：   ####1、导出数据和表结构：mysqldump -u用户名 -p密码 数据库名 &amp;gt; 数据库名.sql#/usr/local/mysql/bin/   mysqldump -uroot -p abc &amp;gt; abc.sql  敲回车后会提示输入密码 ####2、只导出表结构mysqldump -">
+<meta name="description" content="一、导出数据库用mysqldump命令（注意mysql的安装路径，即此命令的路径）：1、导出数据和表结构：mysqldump -u用户名 -p密码 数据库名 &amp;gt; 数据库名.sql#/usr/local/mysql/bin/   mysqldump -uroot -p abc &amp;gt; abc.sql  敲回车后会提示输入密码 2、只导出表结构mysqldump -u用户名 -p密码 -d 数">
 <meta name="keywords" content="MySQL,导数据">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux&#x2F;Mac 导入／导出 MySQL 数据库命令">
 <meta property="og:url" content="http://yoursite.com/2017/10/10/database_mysql_import_export_database_in_linux/index.html">
 <meta property="og:site_name" content="WynHe&#39;s Blog">
-<meta property="og:description" content="###一、导出数据库用mysqldump命令（注意mysql的安装路径，即此命令的路径）：   ####1、导出数据和表结构：mysqldump -u用户名 -p密码 数据库名 &amp;gt; 数据库名.sql#/usr/local/mysql/bin/   mysqldump -uroot -p abc &amp;gt; abc.sql  敲回车后会提示输入密码 ####2、只导出表结构mysqldump -">
+<meta property="og:description" content="一、导出数据库用mysqldump命令（注意mysql的安装路径，即此命令的路径）：1、导出数据和表结构：mysqldump -u用户名 -p密码 数据库名 &amp;gt; 数据库名.sql#/usr/local/mysql/bin/   mysqldump -uroot -p abc &amp;gt; abc.sql  敲回车后会提示输入密码 2、只导出表结构mysqldump -u用户名 -p密码 -d 数">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-10-10T14:50:39.000Z">
+<meta property="og:updated_time" content="2017-10-10T14:53:46.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux&#x2F;Mac 导入／导出 MySQL 数据库命令">
-<meta name="twitter:description" content="###一、导出数据库用mysqldump命令（注意mysql的安装路径，即此命令的路径）：   ####1、导出数据和表结构：mysqldump -u用户名 -p密码 数据库名 &amp;gt; 数据库名.sql#/usr/local/mysql/bin/   mysqldump -uroot -p abc &amp;gt; abc.sql  敲回车后会提示输入密码 ####2、只导出表结构mysqldump -">
+<meta name="twitter:description" content="一、导出数据库用mysqldump命令（注意mysql的安装路径，即此命令的路径）：1、导出数据和表结构：mysqldump -u用户名 -p密码 数据库名 &amp;gt; 数据库名.sql#/usr/local/mysql/bin/   mysqldump -uroot -p abc &amp;gt; abc.sql  敲回车后会提示输入密码 2、只导出表结构mysqldump -u用户名 -p密码 -d 数">
 
 
 
@@ -378,15 +378,12 @@
       
 
       
-        <p>###一、导出数据库用mysqldump命令（注意mysql的安装路径，即此命令的路径）：  </p>
-<p>####1、导出数据和表结构：<br><code>mysqldump -u用户名 -p密码 数据库名 &gt; 数据库名.sql</code><br><code>#/usr/local/mysql/bin/   mysqldump -uroot -p abc &gt; abc.sql</code>  敲回车后会提示输入密码</p>
-<p>####2、只导出表结构<br><code>mysqldump -u用户名 -p密码 -d 数据库名 &gt; 数据库名.sql</code><br><code>#/usr/local/mysql/bin/   mysqldump -uroot -p -d abc &gt; abc.sql</code></p>
+        <h3 id="一、导出数据库用mysqldump命令（注意mysql的安装路径，即此命令的路径）："><a href="#一、导出数据库用mysqldump命令（注意mysql的安装路径，即此命令的路径）：" class="headerlink" title="一、导出数据库用mysqldump命令（注意mysql的安装路径，即此命令的路径）："></a>一、导出数据库用mysqldump命令（注意mysql的安装路径，即此命令的路径）：</h3><h4 id="1、导出数据和表结构："><a href="#1、导出数据和表结构：" class="headerlink" title="1、导出数据和表结构："></a>1、导出数据和表结构：</h4><p><code>mysqldump -u用户名 -p密码 数据库名 &gt; 数据库名.sql</code><br><code>#/usr/local/mysql/bin/   mysqldump -uroot -p abc &gt; abc.sql</code>  敲回车后会提示输入密码</p>
+<h4 id="2、只导出表结构"><a href="#2、只导出表结构" class="headerlink" title="2、只导出表结构"></a>2、只导出表结构</h4><p><code>mysqldump -u用户名 -p密码 -d 数据库名 &gt; 数据库名.sql</code><br><code>#/usr/local/mysql/bin/   mysqldump -uroot -p -d abc &gt; abc.sql</code></p>
 <p><strong>注：/usr/local/mysql/bin/  —&gt;  mysql的data目录</strong>  </p>
-<p>###二、导入数据库  </p>
-<p>####1、首先建空数据库<br><code>mysql&gt;create database abc;</code></p>
-<p>####2、导入数据库  </p>
-<p>#####方法一：<br>（1）选择数据库  <code>mysql&gt;use abc;</code><br>（2）设置数据库编码  <code>mysql&gt;set names utf8;</code><br>（3）导入数据（注意sql文件的路径）<code>mysql&gt;source /home/abc/abc.sql;</code>  </p>
-<p>#####方法二：<br><code>mysql -u用户名 -p密码 数据库名 &lt; 数据库名.sql</code><br><code>#mysql -uabc_f -p abc &lt; abc.sql</code></p>
+<h3 id="二、导入数据库"><a href="#二、导入数据库" class="headerlink" title="二、导入数据库"></a>二、导入数据库</h3><h4 id="1、首先建空数据库"><a href="#1、首先建空数据库" class="headerlink" title="1、首先建空数据库"></a>1、首先建空数据库</h4><p><code>mysql&gt;create database abc;</code></p>
+<h4 id="2、导入数据库"><a href="#2、导入数据库" class="headerlink" title="2、导入数据库"></a>2、导入数据库</h4><h5 id="方法一："><a href="#方法一：" class="headerlink" title="方法一："></a>方法一：</h5><p>（1）选择数据库  <code>mysql&gt;use abc;</code><br>（2）设置数据库编码  <code>mysql&gt;set names utf8;</code><br>（3）导入数据（注意sql文件的路径）<code>mysql&gt;source /home/abc/abc.sql;</code>  </p>
+<h5 id="方法二："><a href="#方法二：" class="headerlink" title="方法二："></a>方法二：</h5><p><code>mysql -u用户名 -p密码 数据库名 &lt; 数据库名.sql</code><br><code>#mysql -uabc_f -p abc &lt; abc.sql</code></p>
 <p><em>建议使用第二种方法导入。</em></p>
 <p><strong>注意：有命令行模式，有sql命令</strong></p>
 <blockquote>
@@ -491,8 +488,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -561,6 +567,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、导出数据库用mysqldump命令（注意mysql的安装路径，即此命令的路径）："><span class="nav-number">1.</span> <span class="nav-text">一、导出数据库用mysqldump命令（注意mysql的安装路径，即此命令的路径）：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、导出数据和表结构："><span class="nav-number">1.1.</span> <span class="nav-text">1、导出数据和表结构：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、只导出表结构"><span class="nav-number">1.2.</span> <span class="nav-text">2、只导出表结构</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、导入数据库"><span class="nav-number">2.</span> <span class="nav-text">二、导入数据库</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、首先建空数据库"><span class="nav-number">2.1.</span> <span class="nav-text">1、首先建空数据库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、导入数据库"><span class="nav-number">2.2.</span> <span class="nav-text">2、导入数据库</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#方法一："><span class="nav-number">2.2.1.</span> <span class="nav-text">方法一：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#方法二："><span class="nav-number">2.2.2.</span> <span class="nav-text">方法二：</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
