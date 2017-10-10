@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Markdown,入门," />
+  <meta name="keywords" content="MySQL,导数据," />
 
 
 
@@ -89,18 +89,18 @@
 
 
 
-<meta name="description" content="参考资料 1: Markdown——入门指南">
-<meta name="keywords" content="Markdown,入门">
+<meta name="description" content="一、导出数据库用mysqldump命令（注意mysql的安装路径，即此命令的路径）：1、导出数据和表结构：mysqldump -u用户名 -p密码 数据库名 &amp;gt; 数据库名.sql#/usr/local/mysql/bin/   mysqldump -uroot -p abc &amp;gt; abc.sql  敲回车后会提示输入密码 2、只导出表结构mysqldump -u用户名 -p密码 -d 数">
+<meta name="keywords" content="MySQL,导数据">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Markdown 参考资料">
-<meta property="og:url" content="http://yoursite.com/2017/07/29/markdown-guide/index.html">
+<meta property="og:title" content="Linux&#x2F;Mac 导入／导出 MySQL 数据库命令">
+<meta property="og:url" content="http://yoursite.com/2017/10/10/database_mysql_import_export_database_in_linux/index.html">
 <meta property="og:site_name" content="WynHe&#39;s Blog">
-<meta property="og:description" content="参考资料 1: Markdown——入门指南">
+<meta property="og:description" content="一、导出数据库用mysqldump命令（注意mysql的安装路径，即此命令的路径）：1、导出数据和表结构：mysqldump -u用户名 -p密码 数据库名 &amp;gt; 数据库名.sql#/usr/local/mysql/bin/   mysqldump -uroot -p abc &amp;gt; abc.sql  敲回车后会提示输入密码 2、只导出表结构mysqldump -u用户名 -p密码 -d 数">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-03-17T13:28:46.000Z">
+<meta property="og:updated_time" content="2017-10-10T14:53:46.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Markdown 参考资料">
-<meta name="twitter:description" content="参考资料 1: Markdown——入门指南">
+<meta name="twitter:title" content="Linux&#x2F;Mac 导入／导出 MySQL 数据库命令">
+<meta name="twitter:description" content="一、导出数据库用mysqldump命令（注意mysql的安装路径，即此命令的路径）：1、导出数据和表结构：mysqldump -u用户名 -p密码 数据库名 &amp;gt; 数据库名.sql#/usr/local/mysql/bin/   mysqldump -uroot -p abc &amp;gt; abc.sql  敲回车后会提示输入密码 2、只导出表结构mysqldump -u用户名 -p密码 -d 数">
 
 
 
@@ -128,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/07/29/markdown-guide/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/10/10/database_mysql_import_export_database_in_linux/"/>
 
 
 
 
 
-  <title> Markdown 参考资料 | WynHe's Blog </title>
+  <title> Linux/Mac 导入／导出 MySQL 数据库命令 | WynHe's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -273,7 +273,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/29/markdown-guide/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/10/database_mysql_import_export_database_in_linux/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Wyn He">
@@ -294,7 +294,7 @@
             
             
               
-                Markdown 参考资料
+                Linux/Mac 导入／导出 MySQL 数据库命令
               
             
           </h1>
@@ -309,8 +309,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-29T00:37:02+08:00">
-                2017-07-29
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-10T22:50:39+08:00">
+                2017-10-10
               </time>
             
 
@@ -332,8 +332,19 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Markdown/" itemprop="url" rel="index">
-                    <span itemprop="name">Markdown</span>
+                  <a href="/categories/Database/" itemprop="url" rel="index">
+                    <span itemprop="name">Database</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Database/MySQL/" itemprop="url" rel="index">
+                    <span itemprop="name">MySQL</span>
                   </a>
                 </span>
 
@@ -367,9 +378,17 @@
       
 
       
-        <h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
-<li>1: <a href="http://www.jianshu.com/p/1e402922ee32/" target="_blank" rel="external">Markdown——入门指南</a></li>
-</ul>
+        <h3 id="一、导出数据库用mysqldump命令（注意mysql的安装路径，即此命令的路径）："><a href="#一、导出数据库用mysqldump命令（注意mysql的安装路径，即此命令的路径）：" class="headerlink" title="一、导出数据库用mysqldump命令（注意mysql的安装路径，即此命令的路径）："></a>一、导出数据库用mysqldump命令（注意mysql的安装路径，即此命令的路径）：</h3><h4 id="1、导出数据和表结构："><a href="#1、导出数据和表结构：" class="headerlink" title="1、导出数据和表结构："></a>1、导出数据和表结构：</h4><p><code>mysqldump -u用户名 -p密码 数据库名 &gt; 数据库名.sql</code><br><code>#/usr/local/mysql/bin/   mysqldump -uroot -p abc &gt; abc.sql</code>  敲回车后会提示输入密码</p>
+<h4 id="2、只导出表结构"><a href="#2、只导出表结构" class="headerlink" title="2、只导出表结构"></a>2、只导出表结构</h4><p><code>mysqldump -u用户名 -p密码 -d 数据库名 &gt; 数据库名.sql</code><br><code>#/usr/local/mysql/bin/   mysqldump -uroot -p -d abc &gt; abc.sql</code></p>
+<p><strong>注：/usr/local/mysql/bin/  —&gt;  mysql的data目录</strong>  </p>
+<h3 id="二、导入数据库"><a href="#二、导入数据库" class="headerlink" title="二、导入数据库"></a>二、导入数据库</h3><h4 id="1、首先建空数据库"><a href="#1、首先建空数据库" class="headerlink" title="1、首先建空数据库"></a>1、首先建空数据库</h4><p><code>mysql&gt;create database abc;</code></p>
+<h4 id="2、导入数据库"><a href="#2、导入数据库" class="headerlink" title="2、导入数据库"></a>2、导入数据库</h4><h5 id="方法一："><a href="#方法一：" class="headerlink" title="方法一："></a>方法一：</h5><p>（1）选择数据库  <code>mysql&gt;use abc;</code><br>（2）设置数据库编码  <code>mysql&gt;set names utf8;</code><br>（3）导入数据（注意sql文件的路径）<code>mysql&gt;source /home/abc/abc.sql;</code>  </p>
+<h5 id="方法二："><a href="#方法二：" class="headerlink" title="方法二："></a>方法二：</h5><p><code>mysql -u用户名 -p密码 数据库名 &lt; 数据库名.sql</code><br><code>#mysql -uabc_f -p abc &lt; abc.sql</code></p>
+<p><em>建议使用第二种方法导入。</em></p>
+<p><strong>注意：有命令行模式，有sql命令</strong></p>
+<blockquote>
+<p>引自：<a href="http://www.cnblogs.com/jiunadianshi/articles/2022334.html" target="_blank" rel="external">http://www.cnblogs.com/jiunadianshi/articles/2022334.html</a></p>
+</blockquote>
 
       
     </div>
@@ -399,9 +418,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Markdown/" rel="tag"># Markdown</a>
+            <a href="/tags/MySQL/" rel="tag"># MySQL</a>
           
-            <a href="/tags/入门/" rel="tag"># 入门</a>
+            <a href="/tags/导数据/" rel="tag"># 导数据</a>
           
         </div>
       
@@ -414,8 +433,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/07/29/next-theme/" rel="next" title="Next主题">
-                <i class="fa fa-chevron-left"></i> Next主题
+              <a href="/2017/07/29/merge_blog_repo_to_another_pc/" rel="next" title="迁移博客（Hexo）至新电脑">
+                <i class="fa fa-chevron-left"></i> 迁移博客（Hexo）至新电脑
               </a>
             
           </div>
@@ -423,10 +442,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/07/29/first-post/" rel="prev" title="分类与标签测试">
-                分类与标签测试 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -562,7 +577,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-number">1.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、导出数据库用mysqldump命令（注意mysql的安装路径，即此命令的路径）："><span class="nav-number">1.</span> <span class="nav-text">一、导出数据库用mysqldump命令（注意mysql的安装路径，即此命令的路径）：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、导出数据和表结构："><span class="nav-number">1.1.</span> <span class="nav-text">1、导出数据和表结构：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、只导出表结构"><span class="nav-number">1.2.</span> <span class="nav-text">2、只导出表结构</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、导入数据库"><span class="nav-number">2.</span> <span class="nav-text">二、导入数据库</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、首先建空数据库"><span class="nav-number">2.1.</span> <span class="nav-text">1、首先建空数据库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、导入数据库"><span class="nav-number">2.2.</span> <span class="nav-text">2、导入数据库</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#方法一："><span class="nav-number">2.2.1.</span> <span class="nav-text">方法一：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#方法二："><span class="nav-number">2.2.2.</span> <span class="nav-text">方法二：</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
