@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-07-28T18:11:21.000Z</updated>
+  <updated>2017-10-10T14:50:39.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,11 +16,52 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Linux/Mac 导入／导出 MySQL 数据库命令</title>
+    <link href="http://yoursite.com/2017/10/10/database_mysql_import_export_database_in_linux/"/>
+    <id>http://yoursite.com/2017/10/10/database_mysql_import_export_database_in_linux/</id>
+    <published>2017-10-10T14:50:39.000Z</published>
+    <updated>2017-10-10T14:50:39.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>###一、导出数据库用mysqldump命令（注意mysql的安装路径，即此命令的路径）：  </p>
+<p>####1、导出数据和表结构：<br><code>mysqldump -u用户名 -p密码 数据库名 &gt; 数据库名.sql</code><br><code>#/usr/local/mysql/bin/   mysqldump -uroot -p abc &gt; abc.sql</code>  敲回车后会提示输入密码</p>
+<p>####2、只导出表结构<br><code>mysqldump -u用户名 -p密码 -d 数据库名 &gt; 数据库名.sql</code><br><code>#/usr/local/mysql/bin/   mysqldump -uroot -p -d abc &gt; abc.sql</code></p>
+<p><strong>注：/usr/local/mysql/bin/  —&gt;  mysql的data目录</strong>  </p>
+<p>###二、导入数据库  </p>
+<p>####1、首先建空数据库<br><code>mysql&gt;create database abc;</code></p>
+<p>####2、导入数据库  </p>
+<p>#####方法一：<br>（1）选择数据库  <code>mysql&gt;use abc;</code><br>（2）设置数据库编码  <code>mysql&gt;set names utf8;</code><br>（3）导入数据（注意sql文件的路径）<code>mysql&gt;source /home/abc/abc.sql;</code>  </p>
+<p>#####方法二：<br><code>mysql -u用户名 -p密码 数据库名 &lt; 数据库名.sql</code><br><code>#mysql -uabc_f -p abc &lt; abc.sql</code></p>
+<p><em>建议使用第二种方法导入。</em></p>
+<p><strong>注意：有命令行模式，有sql命令</strong></p>
+<blockquote>
+<p>引自：<a href="http://www.cnblogs.com/jiunadianshi/articles/2022334.html" target="_blank" rel="external">http://www.cnblogs.com/jiunadianshi/articles/2022334.html</a></p>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;###一、导出数据库用mysqldump命令（注意mysql的安装路径，即此命令的路径）：  &lt;/p&gt;
+&lt;p&gt;####1、导出数据和表结构：&lt;br&gt;&lt;code&gt;mysqldump -u用户名 -p密码 数据库名 &amp;gt; 数据库名.sql&lt;/code&gt;&lt;br&gt;&lt;code&gt;#
+    
+    </summary>
+    
+      <category term="Database" scheme="http://yoursite.com/categories/Database/"/>
+    
+      <category term="MySQL" scheme="http://yoursite.com/categories/Database/MySQL/"/>
+    
+    
+      <category term="MySQL" scheme="http://yoursite.com/tags/MySQL/"/>
+    
+      <category term="导数据" scheme="http://yoursite.com/tags/%E5%AF%BC%E6%95%B0%E6%8D%AE/"/>
+    
+  </entry>
+  
+  <entry>
     <title>迁移博客（Hexo）至新电脑</title>
     <link href="http://yoursite.com/2017/07/29/merge_blog_repo_to_another_pc/"/>
     <id>http://yoursite.com/2017/07/29/merge_blog_repo_to_another_pc/</id>
     <published>2017-07-28T18:00:16.000Z</published>
-    <updated>2017-07-28T18:11:21.000Z</updated>
+    <updated>2017-07-28T18:15:58.000Z</updated>
     
     <content type="html"><![CDATA[<ol>
 <li>从官网Git下载git，在新电脑上安装，因为https速度慢，而且每次都要输入口令，常用的是使用ssh。使用下面方法创建：<br>（1）打开git bash，在用户主目录下运行：ssh-keygen -t rsa -C “youremail@example.com” 把其中的邮件地址换成自己的邮件地址，然后一路回车<br>（2）最后完成后，会在用户主目录下生成.ssh目录，里面有id_rsa和id_rsa.pub两个文件，这两个就是SSH key密钥对，id_rsa是私钥，千万不能泄露出去，id_rsa.pub是公钥，可以放心地告诉任何人。<br>（3）登陆GitHub，打开「Settings」-&gt;「SSH and GPG keys」，然后点击「new SSH key」，填上任意Title，在Key文本框里粘贴公钥id_rsa.pub文件的内容（千万不要粘贴成私钥了！），最后点击「Add SSH Key」，你就应该看到已经添加的Key。<strong>注意：不要在git版本库中运行ssh，然后又将它提交，这样就把密码泄露出去了。</strong> </li>
@@ -45,34 +86,6 @@
     
       &lt;ol&gt;
 &lt;li&gt;从官网Git下载git，在新电脑上安装，因为https速度慢，而且每次都要输入口令，常用的是使用ssh。使用下面方法创建：&lt;br&gt;（1）打开git bash，在用户主目录下运行：ssh-keygen -t rsa -C “youremail@example.co
-    
-    </summary>
-    
-      <category term="Blog" scheme="http://yoursite.com/categories/Blog/"/>
-    
-    
-      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
-    
-      <category term="GitHubPage" scheme="http://yoursite.com/tags/GitHubPage/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>搭建个人博客教程</title>
-    <link href="http://yoursite.com/2017/07/29/build-blog-by-githubpage-and-hexo/"/>
-    <id>http://yoursite.com/2017/07/29/build-blog-by-githubpage-and-hexo/</id>
-    <published>2017-07-28T16:37:02.000Z</published>
-    <updated>2017-03-17T15:18:20.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
-<li>1: <a href="http://www.jianshu.com/p/380290deb8f0" target="_blank" rel="external">Build Bolg by GitHubPage and Hexo</a></li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;1: &lt;a href=&quot;http://www.jianshu.com/p/380290deb8f0&quot; targe
     
     </summary>
     
@@ -119,6 +132,34 @@
       <category term="测试标签" scheme="http://yoursite.com/tags/%E6%B5%8B%E8%AF%95%E6%A0%87%E7%AD%BE/"/>
     
       <category term="测试标签2" scheme="http://yoursite.com/tags/%E6%B5%8B%E8%AF%95%E6%A0%87%E7%AD%BE2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>搭建个人博客教程</title>
+    <link href="http://yoursite.com/2017/07/29/build-blog-by-githubpage-and-hexo/"/>
+    <id>http://yoursite.com/2017/07/29/build-blog-by-githubpage-and-hexo/</id>
+    <published>2017-07-28T16:37:02.000Z</published>
+    <updated>2017-03-17T15:18:20.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li>1: <a href="http://www.jianshu.com/p/380290deb8f0" target="_blank" rel="external">Build Bolg by GitHubPage and Hexo</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;1: &lt;a href=&quot;http://www.jianshu.com/p/380290deb8f0&quot; targe
+    
+    </summary>
+    
+      <category term="Blog" scheme="http://yoursite.com/categories/Blog/"/>
+    
+    
+      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
+    
+      <category term="GitHubPage" scheme="http://yoursite.com/tags/GitHubPage/"/>
     
   </entry>
   
