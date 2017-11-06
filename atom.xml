@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-11-06T15:36:27.000Z</updated>
+  <updated>2017-11-06T15:36:54.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,13 +20,13 @@
     <link href="http://yoursite.com/2017/11/06/installation_server_redis/"/>
     <id>http://yoursite.com/2017/11/06/installation_server_redis/</id>
     <published>2017-11-06T15:32:21.000Z</published>
-    <updated>2017-11-06T15:36:27.000Z</updated>
+    <updated>2017-11-06T15:36:54.000Z</updated>
     
     <content type="html"><![CDATA[<h4 id="1、安装："><a href="#1、安装：" class="headerlink" title="1、安装："></a>1、安装：</h4><p><code>brew install redis</code>  </p>
 <p>🍺  /usr/local/Cellar/redis/4.0.2: 13 files, 2.8MB</p>
 <h4 id="2、启动、停止-redis-server"><a href="#2、启动、停止-redis-server" class="headerlink" title="2、启动、停止 redis server"></a>2、启动、停止 redis server</h4><h5 id="1、-使用配置文件启动"><a href="#1、-使用配置文件启动" class="headerlink" title="1、 使用配置文件启动"></a>1、 使用配置文件启动</h5><p><code>redis-server /usr/local/etc/redis.conf</code></p>
 <h5 id="2、使用-launchctl-启动"><a href="#2、使用-launchctl-启动" class="headerlink" title="2、使用 launchctl 启动"></a>2、使用 launchctl 启动</h5><p><code>launchctl load ~/Library/LaunchAgents/homebrew.mxcl.redis.plist</code></p>
-<p><code>redis-cli ping</code>  返回 pong 代表已经启动</p>
+<h5 id="3、测试-redis-server-是否启动"><a href="#3、测试-redis-server-是否启动" class="headerlink" title="3、测试 redis server 是否启动"></a>3、测试 redis server 是否启动</h5><p><code>redis-cli ping</code>  返回 pong 代表已经启动</p>
 <h5 id="4、停止-redis-server"><a href="#4、停止-redis-server" class="headerlink" title="4、停止 redis server"></a>4、停止 redis server</h5><p><code>redis-cli shutdown</code></p>
 <h4 id="3、自启动、关闭自启动"><a href="#3、自启动、关闭自启动" class="headerlink" title="3、自启动、关闭自启动"></a>3、自启动、关闭自启动</h4><h5 id="1、自启动"><a href="#1、自启动" class="headerlink" title="1、自启动"></a>1、自启动</h5><p><code>ln -sfv /usr/local/opt/redis/*.plist ~/Library/LaunchAgents</code></p>
 <h5 id="2、关闭自启动"><a href="#2、关闭自启动" class="headerlink" title="2、关闭自启动"></a>2、关闭自启动</h5><p><code>launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.redis.plist</code></p>
@@ -133,6 +133,34 @@
   </entry>
   
   <entry>
+    <title>搭建个人博客教程</title>
+    <link href="http://yoursite.com/2017/07/29/build-blog-by-githubpage-and-hexo/"/>
+    <id>http://yoursite.com/2017/07/29/build-blog-by-githubpage-and-hexo/</id>
+    <published>2017-07-28T16:37:02.000Z</published>
+    <updated>2017-03-17T15:18:20.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li>1: <a href="http://www.jianshu.com/p/380290deb8f0" target="_blank" rel="external">Build Bolg by GitHubPage and Hexo</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;1: &lt;a href=&quot;http://www.jianshu.com/p/380290deb8f0&quot; targe
+    
+    </summary>
+    
+      <category term="Blog" scheme="http://yoursite.com/categories/Blog/"/>
+    
+    
+      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
+    
+      <category term="GitHubPage" scheme="http://yoursite.com/tags/GitHubPage/"/>
+    
+  </entry>
+  
+  <entry>
     <title>分类与标签测试</title>
     <link href="http://yoursite.com/2017/07/29/first-post/"/>
     <id>http://yoursite.com/2017/07/29/first-post/</id>
@@ -166,64 +194,6 @@
       <category term="测试标签" scheme="http://yoursite.com/tags/%E6%B5%8B%E8%AF%95%E6%A0%87%E7%AD%BE/"/>
     
       <category term="测试标签2" scheme="http://yoursite.com/tags/%E6%B5%8B%E8%AF%95%E6%A0%87%E7%AD%BE2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>搭建个人博客教程</title>
-    <link href="http://yoursite.com/2017/07/29/build-blog-by-githubpage-and-hexo/"/>
-    <id>http://yoursite.com/2017/07/29/build-blog-by-githubpage-and-hexo/</id>
-    <published>2017-07-28T16:37:02.000Z</published>
-    <updated>2017-03-17T15:18:20.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
-<li>1: <a href="http://www.jianshu.com/p/380290deb8f0" target="_blank" rel="external">Build Bolg by GitHubPage and Hexo</a></li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;1: &lt;a href=&quot;http://www.jianshu.com/p/380290deb8f0&quot; targe
-    
-    </summary>
-    
-      <category term="Blog" scheme="http://yoursite.com/categories/Blog/"/>
-    
-    
-      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
-    
-      <category term="GitHubPage" scheme="http://yoursite.com/tags/GitHubPage/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Next主题</title>
-    <link href="http://yoursite.com/2017/07/29/next-theme/"/>
-    <id>http://yoursite.com/2017/07/29/next-theme/</id>
-    <published>2017-07-28T16:37:02.000Z</published>
-    <updated>2017-03-17T15:22:16.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
-<li>1: <a href="http://theme-next.iissnan.com/getting-started.html#avatar-setting" target="_blank" rel="external">Getting Started</a></li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;1: &lt;a href=&quot;http://theme-next.iissnan.com/getting-starte
-    
-    </summary>
-    
-      <category term="Blog" scheme="http://yoursite.com/categories/Blog/"/>
-    
-      <category term="Next" scheme="http://yoursite.com/categories/Blog/Next/"/>
-    
-    
-      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
-    
-      <category term="GitHubPage" scheme="http://yoursite.com/tags/GitHubPage/"/>
     
   </entry>
   
@@ -279,6 +249,36 @@
       <category term="Markdown" scheme="http://yoursite.com/tags/Markdown/"/>
     
       <category term="入门" scheme="http://yoursite.com/tags/%E5%85%A5%E9%97%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Next主题</title>
+    <link href="http://yoursite.com/2017/07/29/next-theme/"/>
+    <id>http://yoursite.com/2017/07/29/next-theme/</id>
+    <published>2017-07-28T16:37:02.000Z</published>
+    <updated>2017-03-17T15:22:16.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li>1: <a href="http://theme-next.iissnan.com/getting-started.html#avatar-setting" target="_blank" rel="external">Getting Started</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;1: &lt;a href=&quot;http://theme-next.iissnan.com/getting-starte
+    
+    </summary>
+    
+      <category term="Blog" scheme="http://yoursite.com/categories/Blog/"/>
+    
+      <category term="Next" scheme="http://yoursite.com/categories/Blog/Next/"/>
+    
+    
+      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
+    
+      <category term="GitHubPage" scheme="http://yoursite.com/tags/GitHubPage/"/>
     
   </entry>
   
