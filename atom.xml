@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-11-06T15:32:21.000Z</updated>
+  <updated>2017-11-06T15:35:02.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,13 +20,13 @@
     <link href="http://yoursite.com/2017/11/06/installation_server_redis/"/>
     <id>http://yoursite.com/2017/11/06/installation_server_redis/</id>
     <published>2017-11-06T15:32:21.000Z</published>
-    <updated>2017-11-06T15:32:21.000Z</updated>
+    <updated>2017-11-06T15:35:02.000Z</updated>
     
     <content type="html"><![CDATA[<h4 id="1、安装："><a href="#1、安装：" class="headerlink" title="1、安装："></a>1、安装：</h4><p><code>brew install redis</code>  </p>
 <p>🍺  /usr/local/Cellar/redis/4.0.2: 13 files, 2.8MB</p>
 <h4 id="2、启动、停止-redis-server"><a href="#2、启动、停止-redis-server" class="headerlink" title="2、启动、停止 redis server"></a>2、启动、停止 redis server</h4><h5 id="1、-使用配置文件启动"><a href="#1、-使用配置文件启动" class="headerlink" title="1、 使用配置文件启动"></a>1、 使用配置文件启动</h5><p><code>redis-server /usr/local/etc/redis.conf</code></p>
 <h5 id="2、使用-launchctl-启动"><a href="#2、使用-launchctl-启动" class="headerlink" title="2、使用 launchctl 启动"></a>2、使用 launchctl 启动</h5><p><code>launchctl load ~/Library/LaunchAgents/homebrew.mxcl.redis.plist</code></p>
-<h5 id="3、测试redis-server是否启动"><a href="#3、测试redis-server是否启动" class="headerlink" title="3、测试redis server是否启动"></a>3、测试redis server是否启动</h5><p><code>redis-cli ping</code>  返回 pong 代表已经启动</p>
+<h5 id="3、测试-redis-server-是否启动"><a href="#3、测试-redis-server-是否启动" class="headerlink" title="3、测试 redis server 是否启动"></a>3、测试 redis server 是否启动</h5><p><code>redis-cli ping</code>  返回 pong 代表已经启动</p>
 <h5 id="4、停止-redis-server"><a href="#4、停止-redis-server" class="headerlink" title="4、停止 redis server"></a>4、停止 redis server</h5><p><code>redis-cli shutdown</code></p>
 <h4 id="3、自启动、关闭自启动"><a href="#3、自启动、关闭自启动" class="headerlink" title="3、自启动、关闭自启动"></a>3、自启动、关闭自启动</h4><h5 id="1、自启动"><a href="#1、自启动" class="headerlink" title="1、自启动"></a>1、自启动</h5><p><code>ln -sfv /usr/local/opt/redis/*.plist ~/Library/LaunchAgents</code></p>
 <h5 id="2、关闭自启动"><a href="#2、关闭自启动" class="headerlink" title="2、关闭自启动"></a>2、关闭自启动</h5><p><code>launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.redis.plist</code></p>
@@ -161,33 +161,6 @@
   </entry>
   
   <entry>
-    <title>Hello World</title>
-    <link href="http://yoursite.com/2017/07/29/hello-world/"/>
-    <id>http://yoursite.com/2017/07/29/hello-world/</id>
-    <published>2017-07-28T16:37:02.000Z</published>
-    <updated>2017-03-17T05:02:34.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>分类与标签测试</title>
     <link href="http://yoursite.com/2017/07/29/first-post/"/>
     <id>http://yoursite.com/2017/07/29/first-post/</id>
@@ -225,32 +198,29 @@
   </entry>
   
   <entry>
-    <title>Next主题</title>
-    <link href="http://yoursite.com/2017/07/29/next-theme/"/>
-    <id>http://yoursite.com/2017/07/29/next-theme/</id>
+    <title>Hello World</title>
+    <link href="http://yoursite.com/2017/07/29/hello-world/"/>
+    <id>http://yoursite.com/2017/07/29/hello-world/</id>
     <published>2017-07-28T16:37:02.000Z</published>
-    <updated>2017-03-17T15:22:16.000Z</updated>
+    <updated>2017-03-17T05:02:34.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
-<li>1: <a href="http://theme-next.iissnan.com/getting-started.html#avatar-setting" target="_blank" rel="external">Getting Started</a></li>
-</ul>
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;1: &lt;a href=&quot;http://theme-next.iissnan.com/getting-starte
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
     
     </summary>
     
-      <category term="Blog" scheme="http://yoursite.com/categories/Blog/"/>
-    
-      <category term="Next" scheme="http://yoursite.com/categories/Blog/Next/"/>
-    
-    
-      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
-    
-      <category term="GitHubPage" scheme="http://yoursite.com/tags/GitHubPage/"/>
     
   </entry>
   
@@ -279,6 +249,36 @@
       <category term="Markdown" scheme="http://yoursite.com/tags/Markdown/"/>
     
       <category term="入门" scheme="http://yoursite.com/tags/%E5%85%A5%E9%97%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Next主题</title>
+    <link href="http://yoursite.com/2017/07/29/next-theme/"/>
+    <id>http://yoursite.com/2017/07/29/next-theme/</id>
+    <published>2017-07-28T16:37:02.000Z</published>
+    <updated>2017-03-17T15:22:16.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li>1: <a href="http://theme-next.iissnan.com/getting-started.html#avatar-setting" target="_blank" rel="external">Getting Started</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;1: &lt;a href=&quot;http://theme-next.iissnan.com/getting-starte
+    
+    </summary>
+    
+      <category term="Blog" scheme="http://yoursite.com/categories/Blog/"/>
+    
+      <category term="Next" scheme="http://yoursite.com/categories/Blog/Next/"/>
+    
+    
+      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
+    
+      <category term="GitHubPage" scheme="http://yoursite.com/tags/GitHubPage/"/>
     
   </entry>
   
