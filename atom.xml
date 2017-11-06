@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-10-10T14:53:46.000Z</updated>
+  <updated>2017-11-06T15:32:21.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,44 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Redis installation by Homebrew</title>
+    <link href="http://yoursite.com/2017/11/06/installation_server_redis/"/>
+    <id>http://yoursite.com/2017/11/06/installation_server_redis/</id>
+    <published>2017-11-06T15:32:21.000Z</published>
+    <updated>2017-11-06T15:32:21.000Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="1、安装："><a href="#1、安装：" class="headerlink" title="1、安装："></a>1、安装：</h4><p><code>brew install redis</code>  </p>
+<p>🍺  /usr/local/Cellar/redis/4.0.2: 13 files, 2.8MB</p>
+<h4 id="2、启动、停止-redis-server"><a href="#2、启动、停止-redis-server" class="headerlink" title="2、启动、停止 redis server"></a>2、启动、停止 redis server</h4><h5 id="1、-使用配置文件启动"><a href="#1、-使用配置文件启动" class="headerlink" title="1、 使用配置文件启动"></a>1、 使用配置文件启动</h5><p><code>redis-server /usr/local/etc/redis.conf</code></p>
+<h5 id="2、使用-launchctl-启动"><a href="#2、使用-launchctl-启动" class="headerlink" title="2、使用 launchctl 启动"></a>2、使用 launchctl 启动</h5><p><code>launchctl load ~/Library/LaunchAgents/homebrew.mxcl.redis.plist</code></p>
+<h5 id="3、测试redis-server是否启动"><a href="#3、测试redis-server是否启动" class="headerlink" title="3、测试redis server是否启动"></a>3、测试redis server是否启动</h5><p><code>redis-cli ping</code>  返回 pong 代表已经启动</p>
+<h5 id="4、停止-redis-server"><a href="#4、停止-redis-server" class="headerlink" title="4、停止 redis server"></a>4、停止 redis server</h5><p><code>redis-cli shutdown</code></p>
+<h4 id="3、自启动、关闭自启动"><a href="#3、自启动、关闭自启动" class="headerlink" title="3、自启动、关闭自启动"></a>3、自启动、关闭自启动</h4><h5 id="1、自启动"><a href="#1、自启动" class="headerlink" title="1、自启动"></a>1、自启动</h5><p><code>ln -sfv /usr/local/opt/redis/*.plist ~/Library/LaunchAgents</code></p>
+<h5 id="2、关闭自启动"><a href="#2、关闭自启动" class="headerlink" title="2、关闭自启动"></a>2、关闭自启动</h5><p><code>launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.redis.plist</code></p>
+<h4 id="4、卸载-Redis-及文件"><a href="#4、卸载-Redis-及文件" class="headerlink" title="4、卸载 Redis 及文件"></a>4、卸载 Redis 及文件</h4><p><code>brew uninstall redis</code><br><code>rm ~/Library/LaunchAgents/homebrew.mxcl.redis.plist</code> </p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;1、安装：&quot;&gt;&lt;a href=&quot;#1、安装：&quot; class=&quot;headerlink&quot; title=&quot;1、安装：&quot;&gt;&lt;/a&gt;1、安装：&lt;/h4&gt;&lt;p&gt;&lt;code&gt;brew install redis&lt;/code&gt;  &lt;/p&gt;
+&lt;p&gt;🍺  /usr/local/Ce
+    
+    </summary>
+    
+      <category term="Installation" scheme="http://yoursite.com/categories/Installation/"/>
+    
+      <category term="Server" scheme="http://yoursite.com/categories/Installation/Server/"/>
+    
+    
+      <category term="Redis" scheme="http://yoursite.com/tags/Redis/"/>
+    
+      <category term="开发环境搭建" scheme="http://yoursite.com/tags/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"/>
+    
+      <category term="homebrew" scheme="http://yoursite.com/tags/homebrew/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux/Mac 导入／导出 MySQL 数据库命令</title>
@@ -187,34 +225,6 @@
   </entry>
   
   <entry>
-    <title>Markdown 参考资料</title>
-    <link href="http://yoursite.com/2017/07/29/markdown-guide/"/>
-    <id>http://yoursite.com/2017/07/29/markdown-guide/</id>
-    <published>2017-07-28T16:37:02.000Z</published>
-    <updated>2017-03-17T13:28:46.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
-<li>1: <a href="http://www.jianshu.com/p/1e402922ee32/" target="_blank" rel="external">Markdown——入门指南</a></li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;1: &lt;a href=&quot;http://www.jianshu.com/p/1e402922ee32/&quot; targ
-    
-    </summary>
-    
-      <category term="Markdown" scheme="http://yoursite.com/categories/Markdown/"/>
-    
-    
-      <category term="Markdown" scheme="http://yoursite.com/tags/Markdown/"/>
-    
-      <category term="入门" scheme="http://yoursite.com/tags/%E5%85%A5%E9%97%A8/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Next主题</title>
     <link href="http://yoursite.com/2017/07/29/next-theme/"/>
     <id>http://yoursite.com/2017/07/29/next-theme/</id>
@@ -241,6 +251,34 @@
       <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
     
       <category term="GitHubPage" scheme="http://yoursite.com/tags/GitHubPage/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Markdown 参考资料</title>
+    <link href="http://yoursite.com/2017/07/29/markdown-guide/"/>
+    <id>http://yoursite.com/2017/07/29/markdown-guide/</id>
+    <published>2017-07-28T16:37:02.000Z</published>
+    <updated>2017-03-17T13:28:46.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li>1: <a href="http://www.jianshu.com/p/1e402922ee32/" target="_blank" rel="external">Markdown——入门指南</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;1: &lt;a href=&quot;http://www.jianshu.com/p/1e402922ee32/&quot; targ
+    
+    </summary>
+    
+      <category term="Markdown" scheme="http://yoursite.com/categories/Markdown/"/>
+    
+    
+      <category term="Markdown" scheme="http://yoursite.com/tags/Markdown/"/>
+    
+      <category term="入门" scheme="http://yoursite.com/tags/%E5%85%A5%E9%97%A8/"/>
     
   </entry>
   
