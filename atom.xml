@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-03-27T11:13:14.934Z</updated>
+  <updated>2018-03-27T11:14:37.581Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2018/03/27/lnmp_deployment/"/>
     <id>http://yoursite.com/2018/03/27/lnmp_deployment/</id>
     <published>2018-03-27T08:17:13.352Z</published>
-    <updated>2018-03-27T11:13:14.934Z</updated>
+    <updated>2018-03-27T11:14:37.581Z</updated>
     
     <content type="html"><![CDATA[<h4 id="1-Install-Ngnix："><a href="#1-Install-Ngnix：" class="headerlink" title="1 Install Ngnix："></a>1 Install Ngnix：</h4><p><code>sudo apt-get update</code><br><code>sudo apt-get install nginx</code>  </p>
 <p>then restart Nginx:<br><code>sudo systemctl restart nginx.service</code> or <code>sudo service nginx start</code> </p>
@@ -74,7 +74,7 @@
 }
 </code></pre><p>Finally, restart Nginx and PHP7.1-FPM services by running the commands below<br><code>sudo systemctl restart nginx.service</code><br><code>sudo systemctl restart php7.1-fpm.service</code></p>
 <p>That’s it!</p>
-<p>###refrences:<br><a href="https://askubuntu.com/questions/856793/upgrade-to-the-specific-php-7-1-7-2-from-php-7-0-in-ubuntu-16-04" target="_blank" rel="external">https://askubuntu.com/questions/856793/upgrade-to-the-specific-php-7-1-7-2-from-php-7-0-in-ubuntu-16-04</a>  </p>
+<h3 id="refrences"><a href="#refrences" class="headerlink" title="refrences:"></a>refrences:</h3><p><a href="https://askubuntu.com/questions/856793/upgrade-to-the-specific-php-7-1-7-2-from-php-7-0-in-ubuntu-16-04" target="_blank" rel="external">https://askubuntu.com/questions/856793/upgrade-to-the-specific-php-7-1-7-2-from-php-7-0-in-ubuntu-16-04</a>  </p>
 <p><a href="https://websiteforstudents.com/setup-nginx-php-7-1-ubuntu-16-04-17-04/" target="_blank" rel="external">https://websiteforstudents.com/setup-nginx-php-7-1-ubuntu-16-04-17-04/</a></p>
 <p><a href="https://serverfault.com/questions/777994/permission-denied-for-fastcgi-pass-using-php7" target="_blank" rel="external">Permission Denied for fastcgi_pass using PHP7</a>  </p>
 <p><a href="https://pigjian.com/article/ubuntu-lnmp-nginx18-php704-mysql56" target="_blank" rel="external">Ubuntu安装LNMP(Nginx1.8, PHP7.0.4, MySQL5.6,基于阿里云服务器)<br>Ubuntu14.04, Nginx1.8, PHP7.0.4, MySQL5.6</a>  </p>
