@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo,GitHubPage," />
+  <meta name="keywords" content="Laravel,Deploy,PHP,Nginx," />
 
 
 
@@ -89,18 +89,18 @@
 
 
 
-<meta name="description" content="参考资料 1: Build Bolg by GitHubPage and Hexo">
-<meta name="keywords" content="Hexo,GitHubPage">
+<meta name="description" content="1 Install Ngnix：sudo apt-get updatesudo apt-get install nginx   then restart Nginx:sudo systemctl restart nginx.service or sudo service nginx start  open browser and input your ip address and then you">
+<meta name="keywords" content="Laravel,Deploy,PHP,Nginx">
 <meta property="og:type" content="article">
-<meta property="og:title" content="搭建个人博客教程">
-<meta property="og:url" content="http://yoursite.com/2017/07/29/build-blog-by-githubpage-and-hexo/index.html">
+<meta property="og:title" content="LNMP Deployment on Ububtu 16.04">
+<meta property="og:url" content="http://yoursite.com/2018/03/27/lnmp_deployment/index.html">
 <meta property="og:site_name" content="WynHe&#39;s Blog">
-<meta property="og:description" content="参考资料 1: Build Bolg by GitHubPage and Hexo">
+<meta property="og:description" content="1 Install Ngnix：sudo apt-get updatesudo apt-get install nginx   then restart Nginx:sudo systemctl restart nginx.service or sudo service nginx start  open browser and input your ip address and then you">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-03-17T15:18:20.000Z">
+<meta property="og:updated_time" content="2018-03-27T11:06:10.250Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="搭建个人博客教程">
-<meta name="twitter:description" content="参考资料 1: Build Bolg by GitHubPage and Hexo">
+<meta name="twitter:title" content="LNMP Deployment on Ububtu 16.04">
+<meta name="twitter:description" content="1 Install Ngnix：sudo apt-get updatesudo apt-get install nginx   then restart Nginx:sudo systemctl restart nginx.service or sudo service nginx start  open browser and input your ip address and then you">
 
 
 
@@ -128,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/07/29/build-blog-by-githubpage-and-hexo/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/03/27/lnmp_deployment/"/>
 
 
 
 
 
-  <title> 搭建个人博客教程 | WynHe's Blog </title>
+  <title> LNMP Deployment on Ububtu 16.04 | WynHe's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -273,7 +273,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/29/build-blog-by-githubpage-and-hexo/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/27/lnmp_deployment/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Wyn He">
@@ -294,7 +294,7 @@
             
             
               
-                搭建个人博客教程
+                LNMP Deployment on Ububtu 16.04
               
             
           </h1>
@@ -309,8 +309,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-29T00:37:02+08:00">
-                2017-07-29
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-27T16:17:13+08:00">
+                2018-03-27
               </time>
             
 
@@ -332,8 +332,19 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Blog/" itemprop="url" rel="index">
-                    <span itemprop="name">Blog</span>
+                  <a href="/categories/Deploy/" itemprop="url" rel="index">
+                    <span itemprop="name">Deploy</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Deploy/Server/" itemprop="url" rel="index">
+                    <span itemprop="name">Server</span>
                   </a>
                 </span>
 
@@ -367,9 +378,40 @@
       
 
       
-        <h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
-<li>1: <a href="http://www.jianshu.com/p/380290deb8f0" target="_blank" rel="external">Build Bolg by GitHubPage and Hexo</a></li>
-</ul>
+        <h4 id="1-Install-Ngnix："><a href="#1-Install-Ngnix：" class="headerlink" title="1 Install Ngnix："></a>1 Install Ngnix：</h4><p><code>sudo apt-get update</code><br><code>sudo apt-get install nginx</code>  </p>
+<p>then restart Nginx:<br><code>sudo systemctl restart nginx.service</code> or <code>sudo service nginx start</code> </p>
+<p>open browser and input your ip address and then you can see ‘Welcome to Nginx’ page.</p>
+<h4 id="2-Install-Mysql"><a href="#2-Install-Mysql" class="headerlink" title="2 Install Mysql"></a>2 Install Mysql</h4><p><code>sudo apt-get install mysql-server mysql-client</code>  </p>
+<p>after that, input password of mysql admin account.</p>
+<p>use <code>mysql -u root -p</code> to login, if success means Mysql installed correctly.</p>
+<h4 id="3-Install-PHP"><a href="#3-Install-PHP" class="headerlink" title="3 Install PHP"></a>3 Install PHP</h4><p><strong>Attention: must choose correct version of PHP</strong></p>
+<p><strong>&gt; Install PHP7 and extensions</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install php7.0-fpm php7.0-mysql php7.0-common php7.0-curl php7.0-cli php7.0-mcrypt php7.0-mbstring php7.0-dom</div></pre></td></tr></table></figure>
+<p><strong>&gt; Installation for PHP7.1</strong></p>
+<p>There is no official  PHP 7.1 isn’t available to Ubuntu 17.04 and prior versions. It will be released with Ubuntu 17.10.. so if you’re running Ubuntu 17.04 and prior, chances are you can only install PHP 7.0 from the default repository.</p>
+<p>If you want PHP 7.1, there is a version available in ppa:ondrej/php</p>
+<p>You can install it like this:</p>
+<p><code>sudo add-apt-repository ppa:ondrej/php</code><br><code>sudo apt-get update</code></p>
+<p>(optional) <code>sudo apt-get remove php7.0</code></p>
+<p><code>sudo apt-get install php7.1 (from comments)</code></p>
+<p>To properly support most PHP-based websites and other applications, you may have to install additional PHP modules. The commands below is appropriate for most environments:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install php7.1-cli php7.1-common php7.1-json php7.1-opcache php7.1-mysql php7.1-mbstring php7.1-mcrypt php7.1-zip php7.1-fpm php7.1-ldap php7.1-tidy php7.1-recode php7.1-curl</div></pre></td></tr></table></figure>
+<p>Remember that this is not an official upgrade path. The PPA is well known, and is relatively safe to use.</p>
+<p>The PPA has co-installable packages (you can have multiple versions of PHP installed from that PPA). </p>
+<h4 id="Setup-PHP-And-Nginx"><a href="#Setup-PHP-And-Nginx" class="headerlink" title="Setup PHP And Nginx"></a>Setup PHP And Nginx</h4><ol>
+<li>change the line to<br><code>cgi.fix_pathinfo=0</code> in<br><code>/etc/php/7.1/fpm/php.ini</code></li>
+</ol>
+<ol>
+<li>Next, open Nginx site configuration file and configure to use PHP7.1-FPM<br><code>/etc/nginx/conf.d/xxx.conf</code><br>Then configure the it to look similar to this:  </li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">server &#123;</div><div class="line">	listen 81;</div><div class="line"></div><div class="line">	server_name your ip or domain;</div><div class="line">	index index.php;</div><div class="line">	client_max_body_size 50M;</div><div class="line">	error_log error_log_path;</div><div class="line">	access_log access_log_path;</div><div class="line">	root xxx/php/public;</div><div class="line">        location / &#123;</div><div class="line">                try_files $uri $uri/ /index.php$is_args$args;</div><div class="line">        &#125;</div><div class="line">        location ~ \.php &#123;</div><div class="line">                try_files $uri =404;</div><div class="line">                fastcgi_split_path_info ^(.+\.php)(/.+)$;</div><div class="line">                include fastcgi_params;</div><div class="line">                fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;</div><div class="line">                fastcgi_param SCRIPT_NAME $fastcgi_script_name;</div><div class="line">                fastcgi_index index.php;</div><div class="line">                #fastcgi_pass 127.0.0.1:9000;</div><div class="line">		fastcgi_pass unix:/run/php/php7.1-fpm.sock;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">&#125;</div><div class="line">```  </div><div class="line"></div><div class="line">Finally, restart Nginx and PHP7.1-FPM services by running the commands below</div></pre></td></tr></table></figure>
+<p>sudo systemctl restart nginx.service<br>sudo systemctl restart php7.1-fpm.service<br>```</p>
+<p>That’s it!</p>
+<p>###refrences:<br><a href="https://askubuntu.com/questions/856793/upgrade-to-the-specific-php-7-1-7-2-from-php-7-0-in-ubuntu-16-04" target="_blank" rel="external">https://askubuntu.com/questions/856793/upgrade-to-the-specific-php-7-1-7-2-from-php-7-0-in-ubuntu-16-04</a>  </p>
+<p><a href="https://websiteforstudents.com/setup-nginx-php-7-1-ubuntu-16-04-17-04/" target="_blank" rel="external">https://websiteforstudents.com/setup-nginx-php-7-1-ubuntu-16-04-17-04/</a></p>
+<p><a href="https://serverfault.com/questions/777994/permission-denied-for-fastcgi-pass-using-php7" target="_blank" rel="external">Permission Denied for fastcgi_pass using PHP7</a>  </p>
+<p><a href="https://pigjian.com/article/ubuntu-lnmp-nginx18-php704-mysql56" target="_blank" rel="external">Ubuntu安装LNMP(Nginx1.8, PHP7.0.4, MySQL5.6,基于阿里云服务器)<br>Ubuntu14.04, Nginx1.8, PHP7.0.4, MySQL5.6</a>  </p>
+<p><a href="https://www.jianshu.com/p/a696219f40d9" target="_blank" rel="external">在云服务器上部署Laravel</a>  </p>
 
       
     </div>
@@ -399,9 +441,13 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Hexo/" rel="tag"># Hexo</a>
+            <a href="/tags/Laravel/" rel="tag"># Laravel</a>
           
-            <a href="/tags/GitHubPage/" rel="tag"># GitHubPage</a>
+            <a href="/tags/Deploy/" rel="tag"># Deploy</a>
+          
+            <a href="/tags/PHP/" rel="tag"># PHP</a>
+          
+            <a href="/tags/Nginx/" rel="tag"># Nginx</a>
           
         </div>
       
@@ -414,8 +460,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/07/29/first-post/" rel="next" title="分类与标签测试">
-                <i class="fa fa-chevron-left"></i> 分类与标签测试
+              <a href="/2017/11/06/installation_server_redis/" rel="next" title="Redis installation by Homebrew">
+                <i class="fa fa-chevron-left"></i> Redis installation by Homebrew
               </a>
             
           </div>
@@ -423,10 +469,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/07/29/merge_blog_repo_to_another_pc/" rel="prev" title="迁移博客（Hexo）至新电脑">
-                迁移博客（Hexo）至新电脑 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -562,7 +604,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-number">1.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-Install-Ngnix："><span class="nav-number">1.</span> <span class="nav-text">1 Install Ngnix：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-Install-Mysql"><span class="nav-number">2.</span> <span class="nav-text">2 Install Mysql</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-Install-PHP"><span class="nav-number">3.</span> <span class="nav-text">3 Install PHP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Setup-PHP-And-Nginx"><span class="nav-number">4.</span> <span class="nav-text">Setup PHP And Nginx</span></a></li></ol></div>
             
 
           </div>

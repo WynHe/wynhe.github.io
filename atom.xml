@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-11-06T15:36:54.000Z</updated>
+  <updated>2018-03-27T11:06:10.250Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,11 +16,75 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>LNMP Deployment on Ububtu 16.04</title>
+    <link href="http://yoursite.com/2018/03/27/lnmp_deployment/"/>
+    <id>http://yoursite.com/2018/03/27/lnmp_deployment/</id>
+    <published>2018-03-27T08:17:13.352Z</published>
+    <updated>2018-03-27T11:06:10.250Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="1-Install-Ngnix："><a href="#1-Install-Ngnix：" class="headerlink" title="1 Install Ngnix："></a>1 Install Ngnix：</h4><p><code>sudo apt-get update</code><br><code>sudo apt-get install nginx</code>  </p>
+<p>then restart Nginx:<br><code>sudo systemctl restart nginx.service</code> or <code>sudo service nginx start</code> </p>
+<p>open browser and input your ip address and then you can see ‘Welcome to Nginx’ page.</p>
+<h4 id="2-Install-Mysql"><a href="#2-Install-Mysql" class="headerlink" title="2 Install Mysql"></a>2 Install Mysql</h4><p><code>sudo apt-get install mysql-server mysql-client</code>  </p>
+<p>after that, input password of mysql admin account.</p>
+<p>use <code>mysql -u root -p</code> to login, if success means Mysql installed correctly.</p>
+<h4 id="3-Install-PHP"><a href="#3-Install-PHP" class="headerlink" title="3 Install PHP"></a>3 Install PHP</h4><p><strong>Attention: must choose correct version of PHP</strong></p>
+<p><strong>&gt; Install PHP7 and extensions</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install php7.0-fpm php7.0-mysql php7.0-common php7.0-curl php7.0-cli php7.0-mcrypt php7.0-mbstring php7.0-dom</div></pre></td></tr></table></figure>
+<p><strong>&gt; Installation for PHP7.1</strong></p>
+<p>There is no official  PHP 7.1 isn’t available to Ubuntu 17.04 and prior versions. It will be released with Ubuntu 17.10.. so if you’re running Ubuntu 17.04 and prior, chances are you can only install PHP 7.0 from the default repository.</p>
+<p>If you want PHP 7.1, there is a version available in ppa:ondrej/php</p>
+<p>You can install it like this:</p>
+<p><code>sudo add-apt-repository ppa:ondrej/php</code><br><code>sudo apt-get update</code></p>
+<p>(optional) <code>sudo apt-get remove php7.0</code></p>
+<p><code>sudo apt-get install php7.1 (from comments)</code></p>
+<p>To properly support most PHP-based websites and other applications, you may have to install additional PHP modules. The commands below is appropriate for most environments:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install php7.1-cli php7.1-common php7.1-json php7.1-opcache php7.1-mysql php7.1-mbstring php7.1-mcrypt php7.1-zip php7.1-fpm php7.1-ldap php7.1-tidy php7.1-recode php7.1-curl</div></pre></td></tr></table></figure>
+<p>Remember that this is not an official upgrade path. The PPA is well known, and is relatively safe to use.</p>
+<p>The PPA has co-installable packages (you can have multiple versions of PHP installed from that PPA). </p>
+<h4 id="Setup-PHP-And-Nginx"><a href="#Setup-PHP-And-Nginx" class="headerlink" title="Setup PHP And Nginx"></a>Setup PHP And Nginx</h4><ol>
+<li>change the line to<br><code>cgi.fix_pathinfo=0</code> in<br><code>/etc/php/7.1/fpm/php.ini</code></li>
+</ol>
+<ol>
+<li>Next, open Nginx site configuration file and configure to use PHP7.1-FPM<br><code>/etc/nginx/conf.d/xxx.conf</code><br>Then configure the it to look similar to this:  </li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">server &#123;</div><div class="line">	listen 81;</div><div class="line"></div><div class="line">	server_name your ip or domain;</div><div class="line">	index index.php;</div><div class="line">	client_max_body_size 50M;</div><div class="line">	error_log error_log_path;</div><div class="line">	access_log access_log_path;</div><div class="line">	root xxx/php/public;</div><div class="line">        location / &#123;</div><div class="line">                try_files $uri $uri/ /index.php$is_args$args;</div><div class="line">        &#125;</div><div class="line">        location ~ \.php &#123;</div><div class="line">                try_files $uri =404;</div><div class="line">                fastcgi_split_path_info ^(.+\.php)(/.+)$;</div><div class="line">                include fastcgi_params;</div><div class="line">                fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;</div><div class="line">                fastcgi_param SCRIPT_NAME $fastcgi_script_name;</div><div class="line">                fastcgi_index index.php;</div><div class="line">                #fastcgi_pass 127.0.0.1:9000;</div><div class="line">		fastcgi_pass unix:/run/php/php7.1-fpm.sock;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">&#125;</div><div class="line">```  </div><div class="line"></div><div class="line">Finally, restart Nginx and PHP7.1-FPM services by running the commands below</div></pre></td></tr></table></figure>
+<p>sudo systemctl restart nginx.service<br>sudo systemctl restart php7.1-fpm.service<br>```</p>
+<p>That’s it!</p>
+<p>###refrences:<br><a href="https://askubuntu.com/questions/856793/upgrade-to-the-specific-php-7-1-7-2-from-php-7-0-in-ubuntu-16-04" target="_blank" rel="external">https://askubuntu.com/questions/856793/upgrade-to-the-specific-php-7-1-7-2-from-php-7-0-in-ubuntu-16-04</a>  </p>
+<p><a href="https://websiteforstudents.com/setup-nginx-php-7-1-ubuntu-16-04-17-04/" target="_blank" rel="external">https://websiteforstudents.com/setup-nginx-php-7-1-ubuntu-16-04-17-04/</a></p>
+<p><a href="https://serverfault.com/questions/777994/permission-denied-for-fastcgi-pass-using-php7" target="_blank" rel="external">Permission Denied for fastcgi_pass using PHP7</a>  </p>
+<p><a href="https://pigjian.com/article/ubuntu-lnmp-nginx18-php704-mysql56" target="_blank" rel="external">Ubuntu安装LNMP(Nginx1.8, PHP7.0.4, MySQL5.6,基于阿里云服务器)<br>Ubuntu14.04, Nginx1.8, PHP7.0.4, MySQL5.6</a>  </p>
+<p><a href="https://www.jianshu.com/p/a696219f40d9" target="_blank" rel="external">在云服务器上部署Laravel</a>  </p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;1-Install-Ngnix：&quot;&gt;&lt;a href=&quot;#1-Install-Ngnix：&quot; class=&quot;headerlink&quot; title=&quot;1 Install Ngnix：&quot;&gt;&lt;/a&gt;1 Install Ngnix：&lt;/h4&gt;&lt;p&gt;&lt;code&gt;sudo apt
+    
+    </summary>
+    
+      <category term="Deploy" scheme="http://yoursite.com/categories/Deploy/"/>
+    
+      <category term="Server" scheme="http://yoursite.com/categories/Deploy/Server/"/>
+    
+    
+      <category term="Laravel" scheme="http://yoursite.com/tags/Laravel/"/>
+    
+      <category term="Deploy" scheme="http://yoursite.com/tags/Deploy/"/>
+    
+      <category term="PHP" scheme="http://yoursite.com/tags/PHP/"/>
+    
+      <category term="Nginx" scheme="http://yoursite.com/tags/Nginx/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Redis installation by Homebrew</title>
     <link href="http://yoursite.com/2017/11/06/installation_server_redis/"/>
     <id>http://yoursite.com/2017/11/06/installation_server_redis/</id>
     <published>2017-11-06T15:32:21.000Z</published>
-    <updated>2017-11-06T15:36:54.000Z</updated>
+    <updated>2017-11-06T15:37:45.000Z</updated>
     
     <content type="html"><![CDATA[<h4 id="1、安装："><a href="#1、安装：" class="headerlink" title="1、安装："></a>1、安装：</h4><p><code>brew install redis</code>  </p>
 <p>🍺  /usr/local/Cellar/redis/4.0.2: 13 files, 2.8MB</p>
